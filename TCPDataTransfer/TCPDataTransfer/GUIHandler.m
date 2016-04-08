@@ -10,4 +10,18 @@
 
 @implementation GUIHandler
 
+- (IBAction)StartServerNow:(id)sender {
+}
+
+- (IBAction)StopServerNow:(id)sender {
+}
+
+- (IBAction)ConnectToServer:(id)sender {
+}
+
+- (IBAction)DisconnectFromServer:(id)sender {
+}
+
+- (IBAction)SendData:(id)sender {
+}
 @end

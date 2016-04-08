@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+@interface ServerThread : NSThread{
+    
+    CFSocketRef obj_server;
+    
+}
 
-@interface ServerThread : NSThread
-
+-(void)initializedServer;
+-(void)initializeNative:(CFSocketNativeHandle) native_socket;
+-(void)main;
+-(void)stopServer;
 @end

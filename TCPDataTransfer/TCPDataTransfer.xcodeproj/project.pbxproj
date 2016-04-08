@@ -13,6 +13,9 @@
 		CE2531331CB262B500E8E6B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2531321CB262B500E8E6B3 /* Images.xcassets */; };
 		CE2531361CB262B500E8E6B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2531341CB262B500E8E6B3 /* Main.storyboard */; };
 		CE2531421CB262B500E8E6B3 /* TCPDataTransferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2531411CB262B500E8E6B3 /* TCPDataTransferTests.m */; };
+		CE25314D1CB2646100E8E6B3 /* GUIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CE25314C1CB2646100E8E6B3 /* GUIHandler.m */; };
+		CE2531531CB2664F00E8E6B3 /* ClientThread.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2531521CB2664F00E8E6B3 /* ClientThread.m */; };
+		CE2531561CB2667900E8E6B3 /* ServerThread.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2531551CB2667900E8E6B3 /* ServerThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,12 @@
 		CE25313B1CB262B500E8E6B3 /* TCPDataTransferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCPDataTransferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2531401CB262B500E8E6B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE2531411CB262B500E8E6B3 /* TCPDataTransferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCPDataTransferTests.m; sourceTree = "<group>"; };
+		CE25314B1CB2646100E8E6B3 /* GUIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIHandler.h; sourceTree = "<group>"; };
+		CE25314C1CB2646100E8E6B3 /* GUIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUIHandler.m; sourceTree = "<group>"; };
+		CE2531511CB2664F00E8E6B3 /* ClientThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientThread.h; sourceTree = "<group>"; };
+		CE2531521CB2664F00E8E6B3 /* ClientThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientThread.m; sourceTree = "<group>"; };
+		CE2531541CB2667900E8E6B3 /* ServerThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerThread.h; sourceTree = "<group>"; };
+		CE2531551CB2667900E8E6B3 /* ServerThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerThread.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +90,17 @@
 			children = (
 				CE25312A1CB262B500E8E6B3 /* AppDelegate.h */,
 				CE25312B1CB262B500E8E6B3 /* AppDelegate.m */,
-				CE25312F1CB262B500E8E6B3 /* ViewController.h */,
-				CE2531301CB262B500E8E6B3 /* ViewController.m */,
+				CE2531511CB2664F00E8E6B3 /* ClientThread.h */,
+				CE2531521CB2664F00E8E6B3 /* ClientThread.m */,
+				CE25314B1CB2646100E8E6B3 /* GUIHandler.h */,
+				CE25314C1CB2646100E8E6B3 /* GUIHandler.m */,
 				CE2531321CB262B500E8E6B3 /* Images.xcassets */,
 				CE2531341CB262B500E8E6B3 /* Main.storyboard */,
+				CE2531541CB2667900E8E6B3 /* ServerThread.h */,
+				CE2531551CB2667900E8E6B3 /* ServerThread.m */,
 				CE2531281CB262B500E8E6B3 /* Supporting Files */,
+				CE25312F1CB262B500E8E6B3 /* ViewController.h */,
+				CE2531301CB262B500E8E6B3 /* ViewController.m */,
 			);
 			path = TCPDataTransfer;
 			sourceTree = "<group>";
@@ -217,7 +232,10 @@
 			files = (
 				CE2531311CB262B500E8E6B3 /* ViewController.m in Sources */,
 				CE25312E1CB262B500E8E6B3 /* main.m in Sources */,
+				CE2531561CB2667900E8E6B3 /* ServerThread.m in Sources */,
+				CE25314D1CB2646100E8E6B3 /* GUIHandler.m in Sources */,
 				CE25312C1CB262B500E8E6B3 /* AppDelegate.m in Sources */,
+				CE2531531CB2664F00E8E6B3 /* ClientThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

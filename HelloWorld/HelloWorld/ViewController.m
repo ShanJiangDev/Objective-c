@@ -27,7 +27,15 @@
 }
 
 - (IBAction)testButton:(id)sender {
-    self.testLabel.text = @"It worked!";
+    int height_feet = 5;
+    int height_inches = 11;
+    double height_cm = ((height_feet * 12) + height_inches) * 2.54;
+    
+    if(height_cm > 200.00){
+        self.testLabel.text = @"More then 2 meters!";
+    }else{
+        self.testLabel.text = @"Less then 2 meters!";
+    }
 }
 
 @end
