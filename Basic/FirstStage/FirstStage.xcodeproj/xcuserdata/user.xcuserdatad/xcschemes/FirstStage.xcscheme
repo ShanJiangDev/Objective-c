@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE218ED41CB849A500B6E0CD"
-               BuildableName = "testStrings"
-               BlueprintName = "testStrings"
-               ReferencedContainer = "container:testStrings.xcodeproj">
+               BlueprintIdentifier = "CE02022A1CBAE0A100139783"
+               BuildableName = "FirstStage"
+               BlueprintName = "FirstStage"
+               ReferencedContainer = "container:FirstStage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE218ED41CB849A500B6E0CD"
-            BuildableName = "testStrings"
-            BlueprintName = "testStrings"
-            ReferencedContainer = "container:testStrings.xcodeproj">
+            BlueprintIdentifier = "CE02022A1CBAE0A100139783"
+            BuildableName = "FirstStage"
+            BlueprintName = "FirstStage"
+            ReferencedContainer = "container:FirstStage.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,10 +52,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE218ED41CB849A500B6E0CD"
-            BuildableName = "testStrings"
-            BlueprintName = "testStrings"
-            ReferencedContainer = "container:testStrings.xcodeproj">
+            BlueprintIdentifier = "CE02022A1CBAE0A100139783"
+            BuildableName = "FirstStage"
+            BlueprintName = "FirstStage"
+            ReferencedContainer = "container:FirstStage.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,10 +71,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE218ED41CB849A500B6E0CD"
-            BuildableName = "testStrings"
-            BlueprintName = "testStrings"
-            ReferencedContainer = "container:testStrings.xcodeproj">
+            BlueprintIdentifier = "CE02022A1CBAE0A100139783"
+            BuildableName = "FirstStage"
+            BlueprintName = "FirstStage"
+            ReferencedContainer = "container:FirstStage.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

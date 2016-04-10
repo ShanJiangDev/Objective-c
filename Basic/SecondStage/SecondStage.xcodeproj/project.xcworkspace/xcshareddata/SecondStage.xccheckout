@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B4D642CF-EDA3-43A1-A3F6-429445265152</string>
+	<string>EAC83132-A5F7-4D61-A21F-7F4BA5D79F81</string>
 	<key>IDESourceControlProjectName</key>
-	<string>testStrings</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9BF86B973BC522D9DF4B0F4B5644C9DA47C48C43</key>
 		<string>https://github.com/ShanJiangDev/Objective-c.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Basic/testStrings/testStrings.xcodeproj</string>
+	<string>Basic/SecondStage/SecondStage.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9BF86B973BC522D9DF4B0F4B5644C9DA47C48C43</key>
