@@ -7,6 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TableCheck.h"
+#import "MenuItem.h"
+#import "GroupTableCheck.h"
+#import "CateringOrder.h"
+
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -166,6 +172,206 @@ int main(int argc, const char * argv[]) {
     }
     
     grandTotal = priceTotal + (priceTotal*taxRate);
+    
+    
+    // Example for NSArray and NSMutableArray
+    
+    
+    
+    NSArray *scoresArray = @[@100, @94, @83, @77, @72];
+    
+    float sumScore = 0;
+    float averageScore = 0;
+    float count = [scoresArray count];
+    
+    for(NSString *singleScore in scoresArray){
+        sumScore += [singleScore intValue];
+    }
+    
+    averageScore = sumScore / count;
+    
+    
+    NSMutableArray *seatingArray = [NSMutableArray arrayWithObjects:@"Page", @"Chris", @"Ernest",
+                                    @"Mike", @"Jon", nil];
+    
+    // Remove certain index element
+    
+    [seatingArray removeObjectAtIndex:3];
+    
+    // Remove element by content
+    
+    [seatingArray removeObjectIdenticalTo:@"Page"];
+    
+    // Add element at certain index
+    
+    [seatingArray insertObject:@"Phil" atIndex:1];
+    
+    
+    // New lecture
+    // Example for NSArray
+    
+    // Create enum
+    
+    typedef enum orderItem{
+        Bucket = 1,
+        Sandwich = 2,
+        Soda = 3,
+        FamilyDeal = 4,
+        DoubleTrouble = 5,
+        LonelyBird = 6
+    }orderItem;
+    
+    // Define price
+    float chickenBucketPrice = 10.0;
+    float chickenSandwichPrice = 3.25;
+    float sodaPrice = 2.0;
+    float familyDealPrice = 15.0;
+    float doubleTroublePrice = 9.5;
+    float lonelyBirdPrice = 5.0;
+    
+    // Define cost
+    float chickenBucketCost = 3.75;
+    float chickenSandwichCost = 1.25;
+    float sodaCost = 0.25;
+    float familyDealCost = 4.75;
+    float doubleTroubleCost = 4.5;
+    float lonelyBirdCost = 1.50;
+    
+
+    
+    NSArray *kfcOrderArray1= @[ @(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich),
+                                @(DoubleTrouble)];
+  
+    //NSArray *kfcOrderArray2 = @[ @(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda),@(Soda), @(Sandwich), @(Sandwich), @(Bucket), @(FamilyDeal), @(Sandwich), @(DoubleTrouble), @(LonelyBird), @(DoubleTrouble), @(Soda)];
+
+    float profit = 0.0;
+    
+    for(NSNumber* item in kfcOrderArray1){
+        
+        switch ([item integerValue]){
+            case Bucket:
+                profit += (chickenBucketPrice-chickenBucketCost);
+                break;
+                
+            case Sandwich:
+                profit += (chickenSandwichPrice-chickenSandwichCost);
+                break;
+                
+            case Soda:
+                profit += (sodaPrice-sodaCost);
+                break;
+                
+            case FamilyDeal:
+                profit += (familyDealPrice-familyDealCost);
+                break;
+                
+            case DoubleTrouble:
+                profit += (doubleTroublePrice-doubleTroubleCost);
+                break;
+                
+            case LonelyBird:
+                profit += (lonelyBirdPrice-lonelyBirdCost);
+                break;
+                
+            default:
+                NSLog(@"error");
+                break;
+                
+        
+        
+        
+        }
+        
+        
+    }
+    
+    
+    //New Lecture: Create Customer Class
+    //use the TableCheck.h and .m
+    
+    
+    // create instance/object of a customerized class
+    TableCheck *table1 = [[TableCheck alloc]init];
+    
+//    table1.subtotal = 15.00;
+//    table1.tip = 5.00;
+    table1.isTakeOut = YES;
+    
+    
+    
+    // Get the value from created object
+    // Assigned to new variable
+    float savedTip = table1.tip;
+    
+
+    // New lecture + MenuItem.h and .m continue the previous one.
+    
+    MenuItem *grilledChese = [[MenuItem alloc]init];
+    grilledChese.itemName = @"Grilled Chese";
+    grilledChese.itemPrice = 4.50;
+    grilledChese.isDrink = NO;
+    
+    MenuItem *soupDuJour = [[MenuItem alloc] init];
+    soupDuJour.itemName = @"Soup DuJour";
+    soupDuJour.itemPrice = 3.25;
+    soupDuJour.isDrink = NO;
+    
+
+    
+    // MUST alloc memory for NSMutableArray/ NSArray/ NSDictionary... objects.
+    // But this init method should be in customized class instad
+    // table1.iteamOrdered = [[NSMutableArray alloc]init];
+    
+    
+//    [table1.iteamOrdered insertObject:grilledChese atIndex:0];
+//    table1.subtotal += grilledChese.itemPrice;ß
+//    
+//    
+//    [table1.iteamOrdered addObject:soupDuJour];
+//    table1.subtotal += soupDuJour.itemPrice;
+    
+    
+    
+    
+    //New Lecture: Method
+    
+    // creat method
+    // 1. add menu iteam to tableCheck.iteamOrdered
+    // 2. add menuItem.itemPrice to tableCheck.subtotal
+    
+    // use the method created in TableCheck.m
+    [table1 addMenuItem: grilledChese];
+    
+    [table1 addMenuItem:soupDuJour];
+    
+    [table1 addTax];
+    
+    // New Lecture: Inheritance
+    
+    
+    
+    GroupTableCheck *group1 = [[GroupTableCheck alloc]init];
+    [group1 addMenuItem:grilledChese];
+    [group1 addMenuItem:grilledChese];
+    [group1 addMenuItem:grilledChese];
+    [group1 addTips];
+    group1.numberOfCustomers = 4;
+    // use method from child class: GroupTableCheck
+    [group1 checkMinimum];
+  
+    // New Lecture: Composition
+    
+    CateringOrder *catering1 = [[CateringOrder alloc]init];
+    
+    [catering1 addMenuChoice:grilledChese];
+    [catering1 addMenuChoice:soupDuJour];
+    
+    [catering1 setItemQty:grilledChese withQty:4];
+    
+    //Dynamic typing and Polymorphism
+    
+    
+    
     
     
     return 0;
