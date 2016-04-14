@@ -11,8 +11,12 @@
 #import "MenuItem.h"
 #import "GroupTableCheck.h"
 #import "CateringOrder.h"
+// import category
+#import "NSArray+Moview.h"
 
-
+// function declare upstairs of main, and implement downstairs of main
+int increment(int x);
+void increment2(int *x);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -368,7 +372,50 @@ int main(int argc, const char * argv[]) {
     
     [catering1 setItemQty:grilledChese withQty:4];
     
-    //Dynamic typing and Polymorphism
+    // New Lecture: Dynamic typing and Polymorphism: on note
+    
+    // New Lecture: Categories
+    NSArray *rawArray = @[@"Gravity", @"The Martian", @"Interstellar", @"The Martian",
+                          @"Gravity", @"Guardians of the Galaxy"];
+    
+//    NSMutableArray *dedeupedArray = [[NSMutableArray alloc]init];
+    
+//    for(NSString *rawItem in rawArray){
+//        
+//        if(![dedeupedArray containsObject:rawItem]){
+//            
+//            [dedeupedArray addObject:rawItem];
+//        
+//        }
+//
+//    }
+//    
+    
+    // this dedupe method will  be put in a category for furture other class useage
+    
+    rawArray = [rawArray dedupe];
+    
+    
+    // New Lecture: Pointers in Practice
+    
+    // NSString *fruit = @"Apple";
+    
+    int fruit = 5;
+    int *fruit2 = &fruit;
+    
+    NSLog(@"First: fruit value: %i \n", fruit);
+    NSLog(@"First: fruit add: %p \n", &fruit);
+    
+    // when passing a value, the related function will use another memory location
+    //fruit = increment(fruit);
+    
+    // passing the address to function
+    // the same addres will be use in both function and main class
+    increment2(&fruit);
+    increment2(fruit2);
+    
+    NSLog(@"Second: fruit value: %i \n", fruit);
+    NSLog(@"Second: fruit add: %p \n", &fruit);
     
     
     
@@ -377,6 +424,25 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
+
+int increment(int x){
+
+    x = x+1;
+    NSLog(@"Inside: fruit value: %i \n", x);
+    NSLog(@"Inside: fruit add: %p \n", &x);
+    
+    return x;
+    
+}
+
+void increment2(int* x){
+    
+    *x = *x+1;
+    NSLog(@"Inside: fruit value: %i \n", *x);
+    NSLog(@"Inside: fruit add: %p \n", x);
+    
+    
+}
 
 
 

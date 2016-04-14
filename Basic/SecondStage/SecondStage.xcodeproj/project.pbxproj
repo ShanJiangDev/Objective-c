@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74E9AE7C1CBF7293002D020F /* NSArray+Moview.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9AE7B1CBF7293002D020F /* NSArray+Moview.m */; };
 		CE02021C1CBADFB500139783 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE02021B1CBADFB500139783 /* main.m */; };
 		CE0202371CBE3B5100139783 /* TableCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0202361CBE3B5100139783 /* TableCheck.m */; };
 		CE02023A1CBE4AAA00139783 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0202391CBE4AAA00139783 /* MenuItem.m */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		74E9AE7A1CBF7293002D020F /* NSArray+Moview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Moview.h"; sourceTree = "<group>"; };
+		74E9AE7B1CBF7293002D020F /* NSArray+Moview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Moview.m"; sourceTree = "<group>"; };
 		CE0202181CBADFB500139783 /* SecondStage */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SecondStage; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE02021B1CBADFB500139783 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE0202351CBE3B5100139783 /* TableCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCheck.h; sourceTree = "<group>"; };
@@ -53,6 +56,8 @@
 		CE02020F1CBADFB400139783 = {
 			isa = PBXGroup;
 			children = (
+				74E9AE7A1CBF7293002D020F /* NSArray+Moview.h */,
+				74E9AE7B1CBF7293002D020F /* NSArray+Moview.m */,
 				CE02023E1CBED24200139783 /* CateringOrder.h */,
 				CE02023F1CBED24200139783 /* CateringOrder.m */,
 				CE02023B1CBEC51400139783 /* GroupTableCheck.h */,
@@ -141,6 +146,7 @@
 				CE02023A1CBE4AAA00139783 /* MenuItem.m in Sources */,
 				CE02021C1CBADFB500139783 /* main.m in Sources */,
 				CE0202371CBE3B5100139783 /* TableCheck.m in Sources */,
+				74E9AE7C1CBF7293002D020F /* NSArray+Moview.m in Sources */,
 				CE0202401CBED24200139783 /* CateringOrder.m in Sources */,
 				CE02023D1CBEC51400139783 /* GroupTableCheck.m in Sources */,
 			);
