@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RAY-db-F9e">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Playlist-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PlaylistMasterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="xJS-DA-Trx">
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NbH-PG-EQ7"/>
+                                    <constraint firstAttribute="height" constant="200" id="dX9-Jf-gNm"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCf-2G-oij">
+                                <rect key="frame" x="137" y="392" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KZc-Uc-pkM" kind="push" identifier="showPlaylistDetail" id="E3F-bO-Mvf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="FCf-2G-oij" firstAttribute="top" secondItem="xJS-DA-Trx" secondAttribute="bottom" constant="8" id="X2W-wR-exm"/>
+                            <constraint firstItem="xJS-DA-Trx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y7q-1c-LU5"/>
+                            <constraint firstItem="xJS-DA-Trx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gXz-Mm-x5U"/>
+                            <constraint firstItem="FCf-2G-oij" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mCa-pp-t6L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Playlist" id="kXC-9t-Wch"/>
+                    <connections>
+                        <outlet property="aButton" destination="FCf-2G-oij" id="stO-BQ-IYd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="562" y="406"/>
+        </scene>
+        <!--Artists-->
+        <scene sceneID="dls-Ee-b4q">
+            <objects>
+                <viewController id="KZc-Uc-pkM" customClass="PlaylistDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9ml-Ph-VS6"/>
+                        <viewControllerLayoutGuide type="bottom" id="xi2-4V-WmM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W3L-NF-aD7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You havent pressed the button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgL-4X-am0">
+                                <rect key="frame" x="43" y="273" width="235" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.063390016503112878" green="0.61818426847457886" blue="0.51427236991348335" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qgL-4X-am0" firstAttribute="centerX" secondItem="W3L-NF-aD7" secondAttribute="centerX" id="Mpz-wK-lpw"/>
+                            <constraint firstItem="qgL-4X-am0" firstAttribute="centerY" secondItem="W3L-NF-aD7" secondAttribute="centerY" id="peV-Fb-V0Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Artists" id="Rjs-Xq-tKX"/>
+                    <connections>
+                        <outlet property="buttonPressLabel" destination="qgL-4X-am0" id="inu-Bj-JtS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zo-zu-67E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="406"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="frG-p4-uCq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RAY-db-F9e" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LYk-IH-teD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jU7-GI-oku"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wwv-v6-9pd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="406"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coffee" width="53" height="107"/>
+    </resources>
+</document>
