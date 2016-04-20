@@ -23,7 +23,7 @@ NSString *const kArtists= @"Artists";
     
     if(self){
         // Each object in the array is going to be an instance of NSDictionary containing the relevant key value pairs.
-        self.library = @[@{kTitle: @"Rise and Shine",
+        _library = @[@{kTitle: @"Rise and Shine",
                            kDescription: @"Get your morning going by singing along to these classic tracks as you hit the shower bright and early!",
                            kIcon: @"coffee.pdf",
                            kLargeIcon: @"coffee_large.pdf",
